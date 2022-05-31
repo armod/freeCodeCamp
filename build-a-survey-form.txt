@@ -1,0 +1,93 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">freeCodeCamp Survey Form</h1>
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+      <form id="survey-form">
+        <fieldset>
+        <label id="name-label">Name<input id="name" name="name" type="text" placeholder="name" required/></label>
+        <label id="email-label">Email<input id="email" name="email" type="email" placeholder="email" required/></label>
+        <label id="number-label">Age (optional)<input id="number" name="age" type="number" min="13" max="100" placeholder="age"/></label>
+        <label id="role-label">Wchich option best describes your current role?
+          <select id="dropdown">
+            <option value="">Select current role</option>
+            <option value="1">Student</option>
+            <option value="2">Full Time Job</option>
+            <option value="3">Full Time Lerner</option>
+            <option value="4">Prefer not to say</option>
+            <option value="5">Other</option>
+          </select>
+        </label>
+        <label>Would you recommended freeCodeCamp to a friend?
+          <label><input type="radio" name="recommended-freind" value="1"/>Definitely</label>
+          <label><input type="radio" name="recommended-freind" value="2" />Maybe</label>
+          <label><input type="radio" name="recommended-freind" value="3" />Not sure</label>
+        </label>
+        <label>What is your favorite feature of freeCodeCamp?
+          <select id="dropdown">
+            <option value="">Select current role</option>
+            <option value="1">Challenges</option>
+            <option value="2">Projects</option>
+            <option value="3">Community</option>
+            <option value="4">Opensource</option>
+          </select>
+        </label>
+        <label>
+          <input type="checkbox" value="Front-end Projects"/>Front-end Projects
+          <input type="checkbox" value="Back-end Projects"/>Back-end Projects
+          <input type="checkbox" value="Data Visualization"/>Data Visualization
+          <input type="checkbox" value="Challanges"/>Challanges
+          <input type="checkbox" value="Open Source Communitys"/>Open Source Community
+          <input type="checkbox" value="Gitter help rooms"/>Gitter help rooms
+          <input type="checkbox" value="Videos"/>Videos
+          <input type="checkbox" value="City Meetups"/>City Meetups
+          <input type="checkbox" value="Wiki"/>Wiki
+          <input type="checkbox" value="Forum"/>Forum
+          <input type="checkbox" value="Additional Courses"/>Additional Courses
+        </label>
+        <textarea >
+        </textarea>
+        <input id="submit" type="submit" value="Submit" descendant="#survey-form"/>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+body{
+  background-color: lightblue;
+  width: 100%;
+  height: 100vw;
+  margin: 0;
+}
+
+form{
+  display: block;
+  margin: 0 auto;
+  width:60vw;
+  max-width:600px;
+  min-width: 300px;
+}
+
+#description{
+  font-style: italic;
+}
+
+label{
+  display: block;
+}
+
+** end of undefined **
+
