@@ -1,0 +1,91 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>JS Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#what">What</a></li>
+        <li><a class="nav-link" href="#javascript_and_java">JavaScript and Java</a></li>
+        <li><a class="nav-link" href="#hello_world">Hello world</a></li>
+        <li><a class="nav-link" href="#variables">Variables</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header><h1>Introduction</h1></header>
+        <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language.</p> 
+        <p>Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+      </section>
+      <section class="main-section" id="what">
+        <header>What</header>
+        <p>This guide assumes you have the following basic background:</p>
+        <ul>
+          <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+          <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+          <li>Some programming experience1.</li>
+          <li>Some programming experience2.</li>
+          <li>Some programming experience3.</li>
+        </ul>
+        <code>var x = 42</code>
+        <img clas="image" src="./path_to_image.jpg">
+      </section>
+      <section class="main-section" id="javascript_and_java">
+        <header>JavaScript and Java</header>
+        <p>JavaScript and Java are similar in some ways but fundamentally different in some others.</p> 
+        <p>The JavaScript language resembles Java but does not have Java's static typing and strong type checking.</p> 
+        <p>JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
+      </section>
+      <section class="main-section" id="hello_world">
+        <header>Hello world</header>
+        <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p>
+        <p>Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p>
+      </section>
+      <section class="main-section" id="variables">
+        <header>Variables</header>
+        <p>You use variables as symbolic names for values in your application.</p>
+        <p>The names of variables, called identifiers, conform to certain rules.</p>
+        <code>var x = 42</code>
+        <code>var z = 43</code>
+        <code>var y = 44</code>
+        <code>var q = 45</code>
+        <code>var t = 46</code>
+        
+      </section>
+    <main>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+html{
+  background-color: cyan;
+}
+
+body{
+  display:flex;
+}
+nav{
+  background-color: yellow;
+  border: 2px solid black;
+}
+
+main{
+  border: 2px solid red;
+}
+
+@media (max-width: 768px){
+  #navbar{
+    background-color: red;
+  }
+}
+
+** end of undefined **
+
