@@ -1,0 +1,39 @@
+:root{
+  --bg-color1: #00f123;
+}
+
+html{
+  background-color: var(--bg-color1);
+}
+
+body{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-top;
+  margin: 0 auto;
+}
+
+#nav-bar{
+  position: fixed;
+  top: 0;
+  flex-shrink: 0;
+}
+
+img{
+  position:relative;
+}
+
+header{
+  border: 1px solid black;
+}
+
+#section1, #section2, #section3, #section4, #section5{
+  border: 1px solid black;
+  height:100px;
+} 
+
+@media (max-width:720px){
+  body{
+    background-color: white;
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <header id="header">
+      <img id="header-img" alt="logo image" src=""/>
+      <nav id="nav-bar">
+        <ul>
+          <li><a class="nav-link" href="#section1">Link 1</a></li>
+          <li><a class="nav-link" href="#section2">Link 2</a></li>
+          <li><a class="nav-link" href="#section3">Link 3</a></li>
+          <li><a class="nav-link" href="#section4">Link 4</a></li>
+          <li><a class="nav-link" href="#section5">Link 5</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="section1">
+      <video id="video" src="https://youtu.be/54fea7wuV6s?list=RD54fea7wuV6s">video</video>
+    </section>
+    <section id="section2">
+    </section>
+    <section id="section3">
+    </section>
+    <section id="section4">
+    </section>
+    <section id="section5">
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <label id="email-label">Email: <input id="email" type="email" name="email" placeholder="email" /></label><br />
+        <label id="submit-label"><input id="submit" type="submit" value="Submit" descendant="#form"/></label>
+      </form>
+    </section>
+  </body>
+</html>
