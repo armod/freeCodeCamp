@@ -1,3 +1,7 @@
+//FLAGI
+// g - flaga globalna dla wszystkich znaków
+// i uwzględniająca wielkość liter
+
 let quoteSample = "The quick brown fox jumps over the lazy dog.";
 let alphabetRegex = /[abcdefghijklmnopqrstuvwxyz]/gi; // Change this line
 let result = quoteSample.match(alphabetRegex); // Change this line
@@ -15,3 +19,10 @@ let myRegex = /[h-s2-6]/gi; // Change this line
 let result2 = quoteSample2.match(myRegex); // Change this line
 
 console.log("2:",result);
+
+//nie są samogłoskami lub cyframi
+/* let quoteSample = "3 blind mice.";
+let myRegex = /[^aeiou0-9]/gi; // Change this line
+let result = quoteSample.match(myRegex); // Change this line
+
+console.log(result); */
