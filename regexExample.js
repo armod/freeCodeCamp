@@ -8,6 +8,8 @@ console.log("1:",result);
 //wypisuje konkretny element ze stinga
 console.log(result[10]);
 
+
+//DLA DANEGO ZAKRESU
 let quoteSample2 = "Blueberry 3.141592653s are delicious.";
 let myRegex = /[h-s2-6]/gi; // Change this line
 let result2 = quoteSample2.match(myRegex); // Change this line
