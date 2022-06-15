@@ -34,3 +34,32 @@ let myRegex = /s+/gi; // Change this line
 let result = difficultSpelling.match(myRegex); */
 
 //let reCriminals = /C*C+/; //znajduje wystąpienie C lub kulkuktorne wystąpienie lub żadne wystapinei
+
+//SPRAWDZENIE CZY DLA USERa MOŻA STWORZYĆ DANĄ NAZWĘ
+/* let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
+let result = userCheck.test(username);
+console.log(result)
+Code Explanation
+^ - start of input
+[a-z] - first character is a letter
+[a-z]+ - following characters are letters
+\d*$ - input ends with 0 or more digits
+| - or
+^[a-z] - first character is a letter
+\d\d+ - following characters are 2 or more digits
+$ - end of input */
+
+//ZNAJDUJE "Oh no" JEŻELI W CIĄGU JEST OD 3 DO 6 ZNAKÓW "h"
+/* let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/; // Change this line
+let result = ohRegex.test(ohStr);
+
+let ohStr1 = "Ohhhh no";
+let ohStr2 = "Ohhhhh no";
+let ohStr3 = "Ohhhhhh no";
+let ohStr4 = "Ohhhhhhh no";
+console.log(ohStr1.match(ohRegex));
+console.log(ohStr2.match(ohRegex));
+console.log(ohStr3.match(ohRegex));
+console.log(ohStr4.match(ohRegex)); */
