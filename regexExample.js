@@ -26,3 +26,11 @@ let myRegex = /[^aeiou0-9]/gi; // Change this line
 let result = quoteSample.match(myRegex); // Change this line
 
 console.log(result); */
+
+
+// SZUKA PODWÓJNYCH WYSTĄPIEŃ
+/* let difficultSpelling = "Mississippi";
+let myRegex = /s+/gi; // Change this line
+let result = difficultSpelling.match(myRegex); */
+
+//let reCriminals = /C*C+/; //znajduje wystąpienie C lub kulkuktorne wystąpienie lub żadne wystapinei
