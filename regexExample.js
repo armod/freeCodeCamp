@@ -63,3 +63,8 @@ console.log(ohStr1.match(ohRegex));
 console.log(ohStr2.match(ohRegex));
 console.log(ohStr3.match(ohRegex));
 console.log(ohStr4.match(ohRegex)); */
+
+//USUWA BIAŁE ZNAKI Z POCZĄTKU I KOŃCA CIĄGU
+/* let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; // Change this line
+let result = hello.replace(wsRegex,""); // Change this line */
