@@ -31,3 +31,19 @@ for (let i = 0; i < arr.length; i++)
 }
 // Only change code above this line
 console.log(arr);
+
+//KOPIOWANIE TABLICY O ZADANA ILOŚĆ
+/* function copyMachine(arr, num) {
+    let newArr = [];
+    while (num >= 1) {
+      // Only change code below this line
+      //let tab = arr;
+      newArr.push([...arr]);
+      console.log("num=", num, arr);
+      // Only change code above this line
+      num--;
+    }
+    return newArr;
+  }
+  
+  console.log(copyMachine([true, false, true], 2)); */
