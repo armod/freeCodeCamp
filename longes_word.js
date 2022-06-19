@@ -25,3 +25,19 @@ function findLongestWordLength(str)
 
 findLongestWordLength("The quick brown fox jumped over the lazy dog");
 findLongestWordLength("What if we try a super-long word such as otorhinolaryngology");
+
+//max liczba z tablicy
+function largestOfFour(arr) 
+{
+  let tab = [];
+  for(let i=0; i<arr.length; i++)
+  {
+    /* for(let j=0; j<arr[i].length; j++)
+    {
+    } */
+    tab.push(Math.max(...arr[i]));
+  }
+  return tab;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
