@@ -133,3 +133,10 @@ const watchList = [
   // Only change code above this line
   
   console.log(filteredList);
+
+//rozwiazanie 2
+/*   const filteredList = watchList
+  .filter(movie => movie.imdbRating >= 8.0)
+  .map(movie => ({ title: movie["Title"], rating: movie["imdbRating"] }));
+// Only change code above this line
+console.log(filteredList); */
