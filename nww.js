@@ -1,18 +1,36 @@
 function smallestCommons(arr) 
 {
+  let tab_pom = [];
   arr.sort( function(a, b) {
     return a - b;
   });
   console.log(arr);
+
+  //obliczenie iloczynu
+  let iloczyn = 1;
+  for(let x=1; x<=arr[1]; x++)
+  {
+    iloczyn *= x;
+  }
+  //iloczyn = 20;
   let tab = [];
   for(let i=arr[0]; i<=arr[1]; i++)
   {
-      tab.push(i);
+    for(let j=1; j<=iloczyn; j++)
+    {
+      tab.push(i*j);
+      if(tab[j-1] >= iloczyn)
+      {
+        break;
+      }
+    }
+    tab_pom.push(tab);
+    tab = [];
   }
-  console.log(tab);
+  console.log("tab=",tab, "tab_pom=", tab_pom);
 
-  let iloczyn = tab.reduce( (x, y) => x * y, 1);
-  console.log(iloczyn);
+  /* let iloczyn = tab_pom[0].reduce( (x, y) => x * y, 1);*/
+  console.log(iloczyn); 
 
   return iloczyn;
 }
