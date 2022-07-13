@@ -1,6 +1,31 @@
 function smallestCommons(arr) 
 {
-  let tab_pom = [];
+
+
+   // Setup
+   const [min, max] = arr.sort((a, b) => a - b);
+   const numberDivisors = max - min + 1;
+   // Largest possible value for SCM
+   let upperBound = 1;
+   for (let i = min; i <= max; i++) {
+     upperBound *= i;
+   }
+   // Test all multiples of 'max'
+   for (let multiple = max; multiple <= upperBound; multiple += max) {
+     // Check if every value in range divides 'multiple'
+     let divisorCount = 0;
+     for (let i = min; i <= max; i++) {
+       // Count divisors
+       if (multiple % i === 0) {
+         divisorCount += 1;
+       }
+     }
+     if (divisorCount === numberDivisors) {
+       return multiple;
+     }
+   }
+
+  /* let tab_pom = [];
   arr.sort( function(a, b) {
     return a - b;
   });
@@ -30,9 +55,9 @@ function smallestCommons(arr)
   console.log("tab=",tab, "tab_pom=", tab_pom);
 
   /* let iloczyn = tab_pom[0].reduce( (x, y) => x * y, 1);*/
-  console.log(iloczyn); 
+  //console.log(iloczyn); 
 
-  return iloczyn;
+  //return iloczyn; */
 }
 
 smallestCommons([1,5]);
