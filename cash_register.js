@@ -1,5 +1,7 @@
 function checkCashRegister(price, cash, cid) 
 {
+  const cid_kopia = [...cid];
+  //console.log(cid_kopia);
   const kasa = [];
   const nominaly = [["PENNY", 0.01], 
                     ["NICKEL", 0.05], 
@@ -15,27 +17,28 @@ function checkCashRegister(price, cash, cid)
   let ile = 0;
   let zmiana = [];
   let change = {
-              status: "OPEN",
-              change: ["nominal", ile]};
+              status: "",
+              change: ["", 0]};
 
   console.log("Reszta =",reszta);
-  let licznik = 0;
+  //let licznik = 0;
   for(let i=nominaly.length-1; i>=0; i--)
   {
-    console.log("cid=",cid[i][1], nominaly[i][1]);
+    console.log("cid=",cid[i][1]," nominal=", nominaly[i][1], reszta);
     if(reszta > 0 & reszta > nominaly[i][1])
     {
-      if(reszta > cid[i][1])
+      if(reszta > cid[i][1] & cid[i][1] != 0 )
       {
         ile = cid[i][1] / nominaly[i][1];
-        console.log(Math.floor(reszta / cid[i][1]), cid[i][1]);
+        console.log("par", ile);
+        //console.log( Math.floor(reszta / cid[i][1]), cid[i][1]);
         reszta = reszta - (nominaly[i][1] * ile);
         reszta = (Math.round(reszta * 100)/100).toFixed(2);
         cid[i][1] = cid[i][1] - (ile * nominaly[i][1]);
         zmiana.push([cid[i][0], ile * nominaly[i][1]]);
-        console.log("ile =", ile," nominal =", nominaly[i][1],"|", cid[i][0], " cid po = ", cid[i][1], "reszta", reszta);
+        console.log("ile =", ile," nominal =", nominaly[i][1],"|", cid[i][0], " cid po = ", cid[i][1], "reszta=", reszta);
       }
-      else if(reszta < cid[i][1])
+      else if(reszta <= cid[i][1])
       {
         ile = Math.floor(reszta / nominaly[i][1]);
         
@@ -44,16 +47,12 @@ function checkCashRegister(price, cash, cid)
         reszta = (Math.round(reszta * 100)/100).toFixed(2);
         
         cid[i][1] = cid[i][1] - (ile * nominaly[i][1]);
-        zmiana.push([cid[i][0], ile * nominaly[i][1]]);
+        zmiana.push( [cid[i][0], ile * nominaly[i][1]]);
         console.log("ile =", ile," nominal =", nominaly[i][1],"|", cid[i][0], " cid po = ", cid[i][1], "reszta", reszta);
       }
     }
     kasa.push(cid[i][1]);
   }
-
-  
-  const obj = {status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER", 0.5], ["DIME", 0.2], ["PENNY", 0.04]]};
-  console.log(obj);
 
   console.log("Kasa",kasa);
   if(reszta > 0)
@@ -67,9 +66,24 @@ function checkCashRegister(price, cash, cid)
     console.log("reszta =", reszta);
     if((kasa.every( (curr) => curr == 0)) == true)
     {
-      console.log("cid every = ",cid.every( (curr) => curr == 0));
-      change = {status: "CLOSED", change: [["PENNY", 0], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]};
-      return change;
+      console.log("cid every = ", kasa.every( (curr) => curr == 0));
+      //change = {status: "CLOSED", change: [["PENNY", 0], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]};
+      
+      change = cid_kopia;
+      console.log("zmiana",zmiana[0][0]);
+      for(let i=0; i<cid.length; i++)
+      {
+        for(let j=0; j<zmiana.length; j++)
+        {
+          if(cid[i][0] == zmiana[j][0])
+          {
+            change[i][1] = zmiana[j][1];
+          }
+        }
+      }
+      let changer = {status: "CLOSED", change};
+      console.log(change = {status: "CLOSED", change});
+      return changer; 
     }
     else
     {
