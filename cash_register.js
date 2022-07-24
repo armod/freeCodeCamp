@@ -1,7 +1,5 @@
 function checkCashRegister(price, cash, cid) 
 {
-  const cid_kopia = [...cid];
-  //console.log(cid_kopia);
   const kasa = [];
   const nominaly = [["PENNY", 0.01], 
                     ["NICKEL", 0.05], 
@@ -69,7 +67,7 @@ function checkCashRegister(price, cash, cid)
       console.log("cid every = ", kasa.every( (curr) => curr == 0));
       //change = {status: "CLOSED", change: [["PENNY", 0], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]};
       
-      change = cid_kopia;
+      change = cid;
       console.log("zmiana",zmiana[0][0]);
       for(let i=0; i<cid.length; i++)
       {
